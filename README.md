@@ -37,4 +37,12 @@ git clone https://github.com/kartik-dev/spark-structured-streaming.git
 
 git remote add upstream https://github.com/kartik-dev/spark-structured-streaming.git
 ```
+[NOTE]
+====
+From https://msdn.microsoft.com/en-us/library/azure/dn835055.aspx[Tumbling Window (Azure Stream Analytics)]:
 
+> *Tumbling windows* are a series of fixed-sized, non-overlapping and contiguous time intervals.
+====
+
+[NOTE]
+====
