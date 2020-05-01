@@ -1,4 +1,4 @@
-# spark-structured-streaming
+# Spark Structured Streaming Examples
 
 # Squadron Setup for Spark development
 
