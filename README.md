@@ -43,6 +43,3 @@ From https://msdn.microsoft.com/en-us/library/azure/dn835055.aspx[Tumbling Windo
 
 > *Tumbling windows* are a series of fixed-sized, non-overlapping and contiguous time intervals.
 ====
-
-[NOTE]
-====
