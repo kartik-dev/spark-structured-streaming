@@ -10,10 +10,10 @@ yum install -y sbt git maven scala-2.13.0.rpm
 ```
 
 ## Clone repo
-```` 
+```
 git clone https://github.com/kartik-dev/spark-structured-streaming.git
 cd spark-structured-streaming
-````
+```
 
 ## Build and deploy
 ```
@@ -37,6 +37,7 @@ git clone https://github.com/kartik-dev/spark-structured-streaming.git
 
 git remote add upstream https://github.com/kartik-dev/spark-structured-streaming.git
 ```
+
 [NOTE]
 ====
 From https://msdn.microsoft.com/en-us/library/azure/dn835055.aspx[Tumbling Window (Azure Stream Analytics)]:
