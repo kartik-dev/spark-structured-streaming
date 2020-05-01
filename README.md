@@ -3,14 +3,15 @@
 # Squadron Setup for Spark development
 
 ## initial setup
-´´
+```
 curl https://bintray.com/sbt/rpm/rpm | sudo tee /etc/yum.repos.d/bintray-sbt-rpm.repo
 wget http://downloads.lightbend.com/scala/2.13.0/scala-2.13.0.rpm
 yum install -y sbt git maven scala-2.13.0.rpm 
-``
+```
 
 ## Clone repo
-```` git clone https://github.com/kartik-dev/spark-structured-streaming.git
+```` 
+git clone https://github.com/kartik-dev/spark-structured-streaming.git
 cd spark-structured-streaming
 ````
 
