@@ -10,8 +10,9 @@ yum install -y sbt git maven scala-2.13.0.rpm
 ``
 
 ## Clone repo
-git clone https://github.com/kartik-dev/spark-structured-streaming.git
+``` git clone https://github.com/kartik-dev/spark-structured-streaming.git
 cd spark-structured-streaming
+```
 
 ## Build and deploy
 sbt clean package
