@@ -20,7 +20,6 @@ package org.codait.streaming
 import java.util.UUID
 
 import org.apache.spark.sql.SparkSession
-import org.codait.streaming.mqtt.MqttToKafkaService
 
 /**
  * This example illustrates use case of using mqtt stream with spark structured streaming.

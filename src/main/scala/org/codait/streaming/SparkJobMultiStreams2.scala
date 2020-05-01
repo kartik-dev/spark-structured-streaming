@@ -21,7 +21,6 @@ import java.util.UUID
 
 import org.apache.spark.sql.streaming.{OutputMode, StreamingQuery}
 import org.apache.spark.sql.{DataFrame, SparkSession}
-import org.codait.streaming.mqtt.MqttToKafkaService
 
 /**
  * This is an implementation of multi-stream processing with the help of a single kafka queue.
@@ -62,23 +61,8 @@ object SparkJobMultiStreams2 {
 
     import org.apache.spark.sql.functions._
     import spark.implicits._
-    val mqttTopic = "customerRecords"
-    val mqttTopic2 = "carRecords"
-    val kafkaTopic = mqttTopic
-    val kafkaTopic2 = mqttTopic2
-
-    // Begin accumulating messages on two different partitions of spark. As two long running
-    // tasks. These tasks simply relay the messages arriving at mqtt streams to kafka topics.
-    // The two tasks are run in parallel, based on availability of cores.
-    spark.sparkContext.parallelize(Seq(0, 1), 2).mapPartitionsWithIndex { (x, y) =>
-      if( (x + 2) % 2 == 0)
-        MqttToKafkaService.mqttToKafka(mqttTopic, mqttBrokerUrl, kafkaTopic, kafkaServer,
-          "0".getBytes())
-      else
-        MqttToKafkaService.mqttToKafka(mqttTopic2, mqttBrokerUrl, kafkaTopic2, kafkaServer,
-          "1".getBytes())
-        Seq(true).toIterator
-    }.collectAsync()
+    val kafkaTopic = "mqttTopic"
+    val kafkaTopic2 = "mqttTopic2"
 
     // Create DataSet representing all the incoming messages from kafka from different topics.
     val mainInputStream = spark
